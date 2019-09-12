@@ -1,3 +1,37 @@
 html {
   font-family: sans-serif;
 }
+
+#boxGrid {
+  border: 1px solid black;
+}
+
+#gameTable {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  border: 1px solid blue;
+  width: 80px;
+  height: 480px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.disc {
+  background: green;
+  border-radius: 50px;
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+}
+
+.discBlack {
+  background: black;
+}
+
+.discRed {
+  background: red;
+}

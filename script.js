@@ -7,67 +7,48 @@ const column5 = document.getElementById('column5');
 const column6 = document.getElementById('column6');
 const column7 = document.getElementById('column7');
 
+
+//initialize other variables
 let playerTurn = 'red'; //or 'black';
 let currentColumn = 'column1';
 
+
+//column click event listeners
 column1.addEventListener('click', function () {
-    console.log("column1 clicked");
-    clickColumn(column1);
-}
-)
+    clickColumn(column1); })
 
 column2.addEventListener('click', function () {
-    console.log("column2 clicked");
-    clickColumn(column2);
-}
-)
+    clickColumn(column2);})
 
 column3.addEventListener('click', function () {
-    console.log("column3 clicked");
-    clickColumn(column3);
-}
-)
+    clickColumn(column3);})
 
 column4.addEventListener('click', function () {
-    console.log("column4 clicked");
-    clickColumn(column4);
-}
-)
+    clickColumn(column4);})
 
 column5.addEventListener('click', function () {
-    console.log("column5 clicked");
-    clickColumn(column5);
-}
-)
+    clickColumn(column5);})
 
 column6.addEventListener('click', function () {
-    console.log("column6 clicked");
-    clickColumn(column6);
-}
-)
+    clickColumn(column6);})
 
 column7.addEventListener('click', function () {
-    console.log("column7 clicked");
-    clickColumn(column7);
-}
-)
+    clickColumn(column7);})
 
+
+//main function to run when a column is clicked
 function clickColumn(column) {
     currentColumn = column;
-    console.log("clickColumn running; currentColumn="+currentColumn.id);
+    console.log("clickColumn running; currentColumn=" + currentColumn.id);
     createDisc();
     //do all the turn things
 }
 
 
-
-
 //create disc function
-
 function createDisc() {
     console.log("createDisc running");
     let newDisc = document.createElement('div');
-    console.log("newDisc ="+newDisc);
     newDisc.className = 'disc';
     currentColumn.appendChild(newDisc);
 }

@@ -4,7 +4,7 @@
 
     //Create discs in HTML/CSS
 
-//Create javascript DoM elements of grid & discs
+//Create javascript DOM elements of grid & discs
 
     //Build click handler functions
 
@@ -15,6 +15,12 @@
 
 //way to control maximum number of discs allowed in column
 
-//test for the win condition
+//way to track current row & select particular child element
 
-//player turn indicator
+
+//test for the win condition
+-test, column, row, diagonal
+
+//way to block illegal moves
+
+//make it pretty

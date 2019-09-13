@@ -20,8 +20,7 @@ html {
   flex-direction: column-reverse;
 }
 
-.disc {
-  background: green;
+.discBlack, .discRed {
   border-radius: 50px;
   margin: 5px;
   width: 70px;

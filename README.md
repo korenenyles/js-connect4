@@ -18,6 +18,10 @@
 
 
 //way to track current row & select particular child element
+-change column names to start at 0
+-add numeric value attributes to column objects
+-create an array to model the game board
+-push 'red' and 'black' to array when new discs are added
 
 //test for the win condition
 -test, column, row, diagonal

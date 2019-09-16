@@ -14,8 +14,8 @@ let currentColumn = 'column1';
 
 
 //column click event listeners
-column1.addEventListener('click', function () {
-    clickColumn(column1);
+column1.addEventListener('click', function (evt) {
+    clickColumn(evt.target);
 })
 
 column2.addEventListener('click', function () {
@@ -78,9 +78,9 @@ function createDisc() {
 }
 
 function whatDisc(){
-    let columnArray = currentColumn.childNodes;
-    console.log("columnArray ="+columnArray);
-    console.log("columnArray[0] ="+columnArray[length-1].className);
+    // let columnArray = currentColumn.childNodes;
+    // console.log("columnArray ="+columnArray);
+    // console.log("columnArray[0] ="+columnArray[length-1].className);
     // return(currentColumn.childElement[1].className);
 
     // if (){

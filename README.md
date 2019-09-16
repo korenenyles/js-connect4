@@ -24,8 +24,12 @@
 -push 'red' and 'black' to array when new discs are added
 
 //test for the win condition
--test, column, row, diagonal
-
-//way to block illegal moves
+-test, column, row, diagonal, tie
 
 //make it pretty
+-turn indicator
+-animations
+-instructor heads
+-flying chok background
+
+//combine click handlers

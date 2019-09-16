@@ -16,7 +16,7 @@ column6.index = 6;
 
 
 //initialize other variables
-let playerTurn = 'red'; //or 'black';
+let currentPlayer = 'red'; //or 'black';
 let currentColumn = 'column1';
 let gridArray = [
     [],
@@ -65,10 +65,10 @@ function clickColumn(column) {
     if (currentColumn.childElementCount <= 5) {
         createDisc();
         checkForWin();
-        if (playerTurn === 'red') {
-            playerTurn = 'black';
-        } else { playerTurn = 'red' }
-        console.log("Player turn set to " + playerTurn);
+        if (currentPlayer === 'red') {
+            currentPlayer = 'black';
+        } else { currentPlayer = 'red' }
+        console.log("Player turn set to " + currentPlayer);
     } else {
         alert("Illegal Move!");
     }
@@ -79,8 +79,7 @@ function clickColumn(column) {
 function createDisc() {
     // console.log("Running createDisc");
     let newDisc = document.createElement('div');
-    // console.log("currentColumn.index = "+currentColumn.index);
-    if (playerTurn === 'red') {
+    if (currentPlayer === 'red') {
         newDisc.className = 'discRed';
         gridArray[currentColumn.index].push(['red']);
     } else {
@@ -88,14 +87,4 @@ function createDisc() {
         gridArray[currentColumn.index].push(['black']);
     }
     currentColumn.appendChild(newDisc);
-    // console.log("gridArray = "+gridArray);
-    // console.log("gridArray[currentColumn] ="+gridArray[currentColumn.index]);
-    console.log("gridArray[0] ="+gridArray[0]);
-    console.log("gridArray[1] ="+gridArray[1]);
-    console.log("gridArray[2] ="+gridArray[2]);
-    console.log("gridArray[3] ="+gridArray[3]);
-    console.log("gridArray[4] ="+gridArray[4]);
-    console.log("gridArray[5] ="+gridArray[5]);
-    console.log("gridArray[6] ="+gridArray[6]);
-    console.log("gridArray[2,3] ="+gridArray[2][3]);
 }

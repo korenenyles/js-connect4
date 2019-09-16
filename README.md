@@ -18,13 +18,18 @@
 
 
 //way to track current row & select particular child element
+-create an array to model the game board
 -change column names to start at 0
 -add numeric value attributes to column objects
--create an array to model the game board
 -push 'red' and 'black' to array when new discs are added
 
-//test for the win condition
--test, column, row, diagonal, tie
+//test for the win condition; create stubs in script.js and functions in new win.js file:
+-testWin
+-columnWin
+-rowWin
+-diagonalWin
+-tieWin
+-checkForWin to run them all
 
 //make it pretty
 -turn indicator
@@ -32,4 +37,6 @@
 -instructor heads
 -flying chok background
 
-//combine click handlers
+//combine click handlers & refactor with guard clauses
+
+//have a way to reset the game

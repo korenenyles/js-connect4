@@ -46,20 +46,14 @@ column7.addEventListener('click', function () {
 //main function to run when a column is clicked
 function clickColumn(column) {
     currentColumn = column;
+    console.log("Runing clickColumn; currentColumn = "+currentColumn.id);
     if (currentColumn.childElementCount <= 5) {
-        console.log("clickColumn running; currentColumn=" + currentColumn.id);
         createDisc();
-        console.log("type =" +currentColumn.childElementCount);
-        // console.log("whatDisk ="+whatDisc());
-        whatDisc();
-        //do all the turn things
-        //test for column win
-        //test for row win
-        //test for diagonal win
+        checkForWin();
         if (playerTurn === 'red') {
             playerTurn = 'black';
         } else { playerTurn = 'red' }
-        console.log("player turn set to " + playerTurn);
+        console.log("Player turn set to " + playerTurn);
     } else {
         alert("Illegal Move!");
     }
@@ -68,16 +62,15 @@ function clickColumn(column) {
 
 //create disc function
 function createDisc() {
-    console.log("createDisc running");
+    console.log("Running createDisc");
     let newDisc = document.createElement('div');
-    // newDisc.className = 'disc';
     if (playerTurn === 'red') {
         newDisc.className = 'discRed';;
     } else { newDisc.className = 'discBlack'; }
     currentColumn.appendChild(newDisc);
 }
 
-function whatDisc(){
+// function whatDisc(){
     // let columnArray = currentColumn.childNodes;
     // console.log("columnArray ="+columnArray);
     // console.log("columnArray[0] ="+columnArray[length-1].className);
@@ -86,4 +79,4 @@ function whatDisc(){
     // if (){
     //     return 'red';
     // } else {return 'black'}
-}
+// }

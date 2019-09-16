@@ -17,11 +17,13 @@
 
 
 
-//way to track current row & select particular child element
--create an array to model the game board
--change column names to start at 0
--add numeric value attributes to column objects
--push 'red' and 'black' to array when new discs are added
+    //way to track current row & select particular child element
+    -create an array to model the game board
+    -change column names to start at 0
+    -add numeric value attributes to column objects
+    -push 'red' and 'black' to array when new discs are added
+
+//fix creating discs inside of other discs
 
 //test for the win condition; create stubs in script.js and functions in new win.js file:
 -testWin

@@ -39,8 +39,6 @@
 -instructor heads
 -flying chok background
 
-//combine click handlers & refactor with guard clauses
+    //combine click handlers & refactor with guard clauses
 
 //have a way to reset the game
-
-//

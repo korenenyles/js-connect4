@@ -42,13 +42,12 @@ function winDiagonal() {
 
 function winTie() {
     columnIndex = 0;
-    discIndex = 5;
-    winCount = 1;
-    while (columnIndex < 7 && winCount != 0) {
-        if (gridArray[columnIndex][discIndex] == 'red' || gridArray[columnIndex][discIndex] == 'black') {
+    winCount = 0;
+    while (columnIndex < 7 && winCount != -1) {
+        if (gridArray[columnIndex][5] != undefined) {
             winCount++;
-        } else { winCount = 0; }
-        if (winCount === 8) {
+        } else { winCount = -1; }
+        if (winCount === 7) {
             alert("GAME OVER, MAN! GAME OVER!");
         }
         columnIndex++;

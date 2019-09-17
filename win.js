@@ -12,7 +12,7 @@ function winColumn() {
             winCount++;
         } else { winCount = 0; }
         if (winCount === 4) {
-            alert(currentPlayer+" player wins!")
+            alert(currentPlayer + " player wins!")
         }
         discIndex++;
     }
@@ -28,7 +28,7 @@ function winRow() {
             winCount++;
         } else { winCount = 0; }
         if (winCount === 4) {
-            alert(currentPlayer+" player wins!")
+            alert(currentPlayer + " player wins!")
         }
         columnIndex++;
     }
@@ -41,7 +41,18 @@ function winDiagonal() {
 
 
 function winTie() {
-    // console.log("Running winTie");
+    columnIndex = 0;
+    discIndex = 5;
+    winCount = 1;
+    while (columnIndex < 7 && winCount != 0) {
+        if (gridArray[columnIndex][discIndex] == 'red' || gridArray[columnIndex][discIndex] == 'black') {
+            winCount++;
+        } else { winCount = 0; }
+        if (winCount === 8) {
+            alert("GAME OVER, MAN! GAME OVER!");
+        }
+        columnIndex++;
+    }
 }
 
 

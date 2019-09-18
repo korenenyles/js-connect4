@@ -12,7 +12,7 @@ function winColumn() {
             winCount++;
         } else { winCount = 0; }
         if (winCount === 4) {
-            alert(currentPlayer + " player wins!")
+            winAlert();
         }
         discIndex++;
     }
@@ -28,15 +28,50 @@ function winRow() {
             winCount++;
         } else { winCount = 0; }
         if (winCount === 4) {
-            alert(currentPlayer + " player wins!")
+            winAlert();
         }
         columnIndex++;
     }
 }
 
 
-function winDiagonal() {
-    // console.log("Running winDiagonal");
+function winDiagonalRight() {
+    columnIndex = currentColumn.index;
+    discIndex = (currentColumn.childElementCount - 1);
+    while (columnIndex > 0 && discIndex > 0) {
+        columnIndex--;
+        discIndex--;
+    }
+    while (columnIndex >= 0 && discIndex >= 0 && columnIndex < 7 && discIndex < 6) {
+        if (gridArray[columnIndex][discIndex] == currentPlayer) {
+            winCount++;
+        } else { winCount = 0; }
+        if (winCount === 4) {
+            winAlert();
+        }
+        columnIndex++;
+        discIndex++;
+    }
+}
+
+
+function winDiagonalLeft() {
+    columnIndex = currentColumn.index;
+    discIndex = (currentColumn.childElementCount - 1);
+    while (columnIndex < 7 && discIndex > 0) {
+        columnIndex++;
+        discIndex--;
+    }
+    while (columnIndex >= 0 && discIndex >= 0 && columnIndex < 7 && discIndex < 6) {
+        if (gridArray[columnIndex][discIndex] == currentPlayer) {
+            winCount++;
+        } else { winCount = 0; }
+        if (winCount === 4) {
+            winAlert();
+        }
+        columnIndex--;
+        discIndex++;
+    }
 }
 
 
@@ -55,10 +90,16 @@ function winTie() {
 }
 
 
+function winAlert() {
+    alert(currentPlayer + " player wins!");
+}
+
+
 function checkForWin() {
     // console.log("Running checkForWin");
     winColumn();
     winRow();
-    winDiagonal();
+    winDiagonalRight();
+    winDiagonalLeft();
     winTie();
 }

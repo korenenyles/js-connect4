@@ -1,23 +1,60 @@
 html {
-  font-family: sans-serif;
+  background-image: linear-gradient( rgb(20, 16, 16), rgb(28, 100, 255) );
+ 
 }
+h1{
+  font-family: fantasy;
 
+
+}
+.wins{
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
 #boxGrid {
   border: 1px solid black;
+  border-style: double;
+  box-shadow: 2px 4px 10px 4px rgb(235, 232, 255);
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+ background-color: #011938;
+ animation: shadow-pop-tr 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ;
+ animation-iteration-count: 2,0, infinite;
+ /* background-image: url("https://pbs.twimg.com/profile_images/908427865909190656/Aa1_-IV2.jpg"); */
 }
 
 #gameTable {
-  border: 1px solid red;
+  border: 1px solid rgb(252, 250, 250);
   display: flex;
-  justify-content: center;
+  flex-flow: row wrap;
+  box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
+ background-image: url("https://pbs.twimg.com/profile_images/908427865909190656/Aa1_-IV2.jpg");
+ background-size: 575px 483px;
 }
 
 .column {
-  border: 1px solid blue;
+  /* border: 1px solid #fbfcff; */
   width: 80px;
   height: 480px;
   display: flex;
   flex-direction: column-reverse;
+  box-shadow: 2px 4px 10px 4px #041399;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .discBlack, .discRed {
@@ -25,12 +62,65 @@ html {
   margin: 5px;
   width: 70px;
   height: 70px;
+  /* animation-name: slideIn;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal; */
 }
 
 .discBlack {
-  background: black;
+  background-image: url("https://ca.slack-edge.com/TCNHBFEG3-ULBJ6N0JU-c184acded16e-48");
+  box-shadow: 5px 4px 10px 4px rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+  border-style: double;
+  animation-name: slideIn;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
 }
-
 .discRed {
-  background: red;
+  background-image: url("https://ca.slack-edge.com/TCNHBFEG3-UCP6CHC4B-1296b05c27e0-48");
+  box-shadow: 2px 4px 10px 4px rgb(73, 85, 255);
+  border-color: rgb(0, 0, 0);
+  border-style: dashed;
+  animation-name: slideIn;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes slideIn{
+    0%{
+     transform: translateY(0);
+      transform: translateY(-300px);
+    }
+    20%{
+     transform: translateY(0);
+      transform: translateY(0);
+    }
+    40%{
+     transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    50%{
+     transform: translateY(0);
+      transform: translateY(0);
+    }
+    60%{
+     transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+    80%{
+     transform: translateY(0);
+      transform: translateY(0);
+    }
+    100%{
+     transform: translateY(0);
+      transform: translateY(0);
+    }
 }

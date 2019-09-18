@@ -73,3 +73,4 @@ function createDisc() {
     }
     currentColumn.appendChild(newDisc);
 }
+

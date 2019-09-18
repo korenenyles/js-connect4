@@ -26,12 +26,12 @@
 //fix creating discs inside of other discs
 
 //test for the win condition; create stubs in script.js and functions in new win.js file:
--testWin
--columnWin
--rowWin
+    -testWin
+    -columnWin
+    -rowWin
 -diagonalWin
 -tieWin
--checkForWin to run them all
+    -checkForWin to run them all
 
 //make it pretty
 -turn indicator
@@ -39,6 +39,6 @@
 -instructor heads
 -flying chok background
 
-//combine click handlers & refactor with guard clauses
+    //combine click handlers & refactor with guard clauses
 
 //have a way to reset the game

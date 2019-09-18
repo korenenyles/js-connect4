@@ -8,30 +8,23 @@ h1{
 
 }
 .wins{
-  grid-column-start: auto;
-  font-family: fantasy;
-  font-stretch: expanded;
-  text-transform: capitalize;
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: left;
-  text-shadow: 2px 4px 10px rgb(255, 255, 255);
-
+  color: rgb(0, 0, 0);
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
- @keyframes shadow-pop-tr {
-  0% {
-    box-shadow: 1px -1px #ffffff, 2px -2px white 3px -3px white 4px -4px white 5px -5px white 6px -6px white 7px -7px white 8px -8px #000e8b;
-            box-shadow: 1px -1px #fffafa, 2px -2px #b4b2b2, 3px -3px white 4px -4px white 5px -5px white 6px -6px white 7px -7px white 8px -8px #0213a5;
-} 
-50% {
-  box-shadow: 1px -1px rgb(84, 134, 241) 2px -2px white 3px -3px white 4px -4px white 5px -5px rgb(255, 249, 249) 6px -6px white 7px -7px white 8px -8px #000e8b;
-          box-shadow: 1px -1px #fffafa, 2px -2px #ffffff, 3px -3px rgb(185, 170, 170) 4px -4px white 5px -5px rgb(184, 179, 179) 6px -6px white 7px -7px white 8px -8px #0213a5;
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
-100% {
-  box-shadow: 1px -1px #ffffff, 2px -2px white 3px -3px white 4px -4px white 5px -5px white 6px -6px white 7px -7px white 8px -8px #000e8b;
-          box-shadow: 1px -1px #fffafa, 2px -2px #ffffff, 3px -3px rgb(184, 180, 180) 4px -4px white 5px -5px rgb(84, 134, 241) 6px -6px white 7px -7px white 8px -8px #0213a5;
-}
-}
-
-
 #boxGrid {
   border: 1px solid black;
   border-style: double;
@@ -40,7 +33,6 @@ h1{
   flex-direction: row;
   justify-content: flex-end;
  background-color: #011938;
- animation: shadow-pop-tr 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ;
  animation: shadow-pop-tr 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ;
  animation-iteration-count: 2,0, infinite;
  /* background-image: url("https://pbs.twimg.com/profile_images/908427865909190656/Aa1_-IV2.jpg"); */
@@ -56,12 +48,13 @@ h1{
 }
 
 .column {
-  border: 1px solid #fbfcff;
+  /* border: 1px solid #fbfcff; */
   width: 80px;
   height: 480px;
   display: flex;
   flex-direction: column-reverse;
   box-shadow: 2px 4px 10px 4px #041399;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .discBlack, .discRed {
@@ -130,4 +123,4 @@ h1{
      transform: translateY(0);
       transform: translateY(0);
     }
-  }
+}

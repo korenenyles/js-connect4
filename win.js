@@ -91,7 +91,12 @@ function winTie() {
 
 
 function winAlert() {
-    alert(currentPlayer + " player wins!");
+    if (currentPlayer == 'red'){
+        alert("CHOK WINS!");
+    } else {
+        alert("RANDY WINS!");
+    }
+    location.reload();
 }
 
 

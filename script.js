@@ -1,6 +1,9 @@
 //define gameTable
 const gameTable = document.getElementById('gameTable');
 
+//define turn indicator
+const turnBox = document.getElementById('turnBox');
+
 //define columns
 const column0 = document.getElementById('column0');
 column0.index = 0;
@@ -50,10 +53,7 @@ function clickColumn(column) {
     if (currentColumn.childElementCount <= 5) {
         createDisc();
         checkForWin();
-        if (currentPlayer === 'red') {
-            currentPlayer = 'black';
-        } else { currentPlayer = 'red' }
-        console.log("Player turn set to " + currentPlayer);
+        swapPlayer();
     } else {
         alert("Illegal Move!");
     }
@@ -74,3 +74,13 @@ function createDisc() {
     currentColumn.appendChild(newDisc);
 }
 
+function swapPlayer(){
+    if (currentPlayer === 'red') {
+        currentPlayer = 'black';
+        turnBox.innerHTML = 'RANDY'
+    } else {
+        currentPlayer = 'red';
+        turnBox.innerHTML = 'CHOK'
+    }
+    console.log("Player turn set to " + currentPlayer);
+}

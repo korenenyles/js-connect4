@@ -52,3 +52,8 @@ function checkForWin() {
     winDiagonal();
     winTie();
 }
+
+function myButton(){
+	location.reload();}
+    
+    

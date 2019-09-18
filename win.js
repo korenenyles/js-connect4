@@ -103,3 +103,6 @@ function checkForWin() {
     winDiagonalLeft();
     winTie();
 }
+
+// function myButton(){
+// 	location.reload();}

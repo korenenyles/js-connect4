@@ -1,3 +1,9 @@
+//define gameTable
+const gameTable = document.getElementById('gameTable');
+
+//define turn indicator
+const turnBox = document.getElementById('turnBox');
+
 //define columns
 const column0 = document.getElementById('column0');
 column0.index = 0;
@@ -28,35 +34,17 @@ let gridArray = [
     [],
 ];
 
-//column click event listeners
-column0.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
-})
 
-column1.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
-})
+//click event listener
+gameTable.addEventListener('click', function (evt) {
+    //when a disc is clicked, run clickColumn with its parent column:
+    if (evt.target.className.indexOf('disc') > -1) {
+        clickColumn(evt.target.parentNode);
+    } 
+    //when anywhere else in a column is clicked, run clickColumn with that column:
+    else clickColumn(evt.target);
 
-column2.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
 })
-
-column3.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
-})
-
-column4.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
-})
-
-column5.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
-})
-
-column6.addEventListener('click', function (evt) {
-    clickColumn(evt.target);
-})
-
 
 //main function to run when a column is clicked
 function clickColumn(column) {
@@ -65,10 +53,7 @@ function clickColumn(column) {
     if (currentColumn.childElementCount <= 5) {
         createDisc();
         checkForWin();
-        if (currentPlayer === 'red') {
-            currentPlayer = 'black';
-        } else { currentPlayer = 'red' }
-        console.log("Player turn set to " + currentPlayer);
+        swapPlayer();
     } else {
         alert("Illegal Move!");
     }
@@ -89,3 +74,13 @@ function createDisc() {
     currentColumn.appendChild(newDisc);
 }
 
+function swapPlayer(){
+    if (currentPlayer === 'red') {
+        currentPlayer = 'black';
+        turnBox.innerHTML = 'RANDY'
+    } else {
+        currentPlayer = 'red';
+        turnBox.innerHTML = 'CHOK'
+    }
+    console.log("Player turn set to " + currentPlayer);
+}

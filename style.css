@@ -56,9 +56,9 @@ font-size: 45px;
   }
 }
 #boxGrid {
-  border: 1px solid black;
+  border: 1px solid rgb(253, 255, 252);
   border-style: double;
-  box-shadow: 2px 4px 10px 4px rgb(235, 232, 255);
+  box-shadow: 2px 4px 10px 4px rgb(1, 255, 242);
   display:flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -70,17 +70,19 @@ font-size: 45px;
   /* border: 1px solid rgb(252, 250, 250); */
   display: flex;
   justify-content: center;
+  margin:20px;
   /* flex-flow: cou wrap; */
   box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
  background-image: url("https://pbs.twimg.com/profile_images/908427865909190656/Aa1_-IV2.jpg");
- background-size: contain;
+ background-size: cover;
  animation: glow 2s ease-in infinite alternate;
 }
 
 .column {
-  border: 1px solid #000000;
+  border: 1px solid #f0f0f0;
+  margin:10px;
   width: 80px;
-  height: 480px;
+  height: 500px;
   display: flex;
   flex-direction: column-reverse;
   /* box-shadow: 2px 4px 10px 4px #041399; */
@@ -89,7 +91,7 @@ font-size: 45px;
 
 .discBlack, .discRed{
   border-radius: 50px;
-  margin: 5px;
+  margin: 10px;
   width: 70px;
   height: 70px;
   /* animation-name: slideIn;

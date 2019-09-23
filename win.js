@@ -7,7 +7,7 @@ function winColumn() {
     // console.log("Running winColumn");
     columnIndex = currentColumn.index;
     discIndex = 0;
-    wincount = 0;
+    winCount = 0;
     while (discIndex < 7) {
         if (gridArray[columnIndex][discIndex] == currentPlayer) {
             winCount++;
@@ -24,7 +24,7 @@ function winRow() {
     // console.log("Running winRow");
     columnIndex = 0;
     discIndex = currentColumn.childElementCount - 1;
-    wincount = 0;
+    winCount = 0;
     while (columnIndex < 7) {
         if (gridArray[columnIndex][discIndex] == currentPlayer) {
             winCount++;
@@ -41,7 +41,7 @@ function winDiagonalRight() {
     // console.log("Running winDiagonalRight");
     columnIndex = currentColumn.index;
     discIndex = (currentColumn.childElementCount - 1);
-    wincount = 0;
+    winCount = 0;
     while (columnIndex > 0 && discIndex > 0) {
         columnIndex--;
         discIndex--;
@@ -63,7 +63,7 @@ function winDiagonalLeft() {
     // console.log("Running winDiagonalLeft");
     columnIndex = currentColumn.index;
     discIndex = (currentColumn.childElementCount - 1);
-    wincount = 0;
+    winCount = 0;
     while (columnIndex < 7 && discIndex > 0) {
         columnIndex++;
         discIndex--;
@@ -115,6 +115,3 @@ function checkForWin() {
     winDiagonalLeft();
     winTie();
 }
-
-// function myButton(){
-// 	location.reload();}

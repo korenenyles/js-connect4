@@ -1,88 +1,104 @@
 html {
   background-image: linear-gradient( rgb(20, 16, 16), rgb(28, 100, 255));
 }
-
-h1 {
-  font-family: fantasy;
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+background-image:radial-gradient(rgb(34, 137, 255), rgb(0, 0, 0));
+text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+text-align: center;
+font-size: 45px;
+}
+.wins{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+text-align: center;
+font-size: 45px;
 }
 
-body {
-  text-align: center;
-}
 
-#title {
-  margin: 20px auto;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 40px;
-  color: hotpink;
-}
 
-#pageWrapper {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.wins {
+/* justify-self: flex-end;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: left;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-  padding: 20px;
-}
-
+  /* padding-right: 55px ; */
+  /* color: rgb(0, 0, 0); */
+  /* text-align: center; */
+  /* -webkit-animation: glow 1s ease-in-out infinite alternate; */
+  /* -moz-animation: glow 1s ease-in-out infinite alternate; */
+  /* animation: ; */
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    box-shadow: 
+    0 0 10px rgb(33, 8, 255), 
+    0 0 20px #fff, 
+    0 0 30px #030202, 
+    0 0 40px #000000, 
+    0 0 50px #0300c0, 
+    0 0 60px #000000, 
+    0 0 70px #000000;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    box-shadow: 
+    0 0 20px #fff, 
+    0 0 30px #b6b3b3, 
+    0 0 40px #011272, 
+    0 0 50px #b8b5b5, 
+    0 0 60px #002281, 
+    0 0 70px #0873ff, 
+    0 0 80px #05037e;
   }
 }
 
 #boxGrid {
-  border: 1px solid black;
+  border: 1px solid rgb(253, 255, 252);
   border-style: double;
-  box-shadow: 2px 4px 10px 4px rgb(235, 232, 255);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  background-color: #011938;
-  animation: shadow-pop-tr 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  animation-iteration-count: 2, 0, infinite;
+  box-shadow: 2px 4px 10px 4px rgb(1, 255, 242);
+  display:flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+ background-color: #011938;
+ /* background-image: url("https://pbs.twimg.com/profile_images/908427865909190656/Aa1_-IV2.jpg"); */
 }
 
 #gameTable {
-  border: 1px solid rgb(252, 250, 250);
+  /* border: 1px solid rgb(252, 250, 250); */
   display: flex;
-  flex-flow: row wrap;
+  justify-content: center;
+  margin:20px;
+  /* flex-flow: cou wrap; */
   box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
-  background-image: url("img/kenzie.jpg");
-  background-size: 575px 483px;
+ background-image: url("https://pbs.twimg.com/profile_images/908427865909190656/Aa1_-IV2.jpg");
+ background-size: cover;
+ animation: glow 2s ease-in infinite alternate;
 }
 
 .column {
+  border: 1px solid #f0f0f0;
+  margin:10px;
   width: 80px;
-  height: 480px;
+  height: 500px;
   display: flex;
   flex-direction: column-reverse;
-  box-shadow: 2px 4px 10px 4px #041399;
+  /* box-shadow: 2px 4px 10px 4px #041399; */
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-.discBlack, .discRed {
+.discBlack, .discRed{
   border-radius: 50px;
-  margin: 5px;
+  margin: 10px;
   width: 70px;
   height: 70px;
 }
 
 .discBlack {
-  background-image: url("img/randy.jpg");
+  
+  background-image: url("https://ca.slack-edge.com/TCNHBFEG3-ULBJ6N0JU-c184acded16e-48");
   box-shadow: 5px 4px 10px 4px rgb(0, 0, 0);
   border-color: rgb(0, 0, 0);
   border-style: double;
@@ -95,16 +111,26 @@ body {
 }
 
 .discRed {
-  background-image: url("img/chok.jpg");
-  box-shadow: 2px 4px 10px 4px rgb(73, 85, 255);
+  background-image: url("https://ca.slack-edge.com/TCNHBFEG3-UCP6CHC4B-1296b05c27e0-48");
+  box-shadow: 2px 4px 10px 4px rgb(0, 0, 0);
   border-color: rgb(0, 0, 0);
-  border-style: dashed;
+  border-style: double;
   animation-name: slideIn;
   animation-duration: 2.2s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
+
+}
+
+#pageWrapper{
+  display:flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+
+
 }
 
 @keyframes slideIn {
